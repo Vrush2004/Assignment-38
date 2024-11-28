@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <title>Slidebar</title>
+</head>
+<body>
+    <i class="fa-solid fa-bars menubar" id="menu" onclick="openSidebar()"></i>
+    <div class="sidebar" id="sidebar">
+        <div class="close-menu" onclick="closeSidebar()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div>
+            <i class="fa-brands fa-microblog menu-logo"> Logo</i>
+            <div class="menu-item">
+                <i class="fa-solid fa-house menu-icon"></i>
+                <a href="" class="menu-text">Home</a>
+            </div>
+            <div class="menu-item">
+                <i class="fa-solid fa-user menu-icon"></i>
+                <a href="" class="menu-text">About</a>
+            </div>
+            <div class="menu-item">
+                <i class="fa-solid fa-phone menu-icon"></i>
+                <a href="" class="menu-text">Contact</a>
+            </div>
+            <div class="menu-item">
+                <i class="fa-solid fa-toolbox menu-icon"></i>
+                <a href="" class="menu-text">Preferences</a>
+            </div>
+            <div class="menu-item">
+                <i class="fa-solid fa-gear menu-icon"></i>
+                <a href="" class="menu-text">Settings</a>
+            </div>
+            <div class="menu-item">
+                <i class="fa-solid fa-right-from-bracket menu-icon"></i>
+                <a href="" class="menu-text">Logout</a>
+            </div>
+        </div>
+        
+    </div>
+
+    <script>
+        const sidebarEle = document.getElementById("sidebar")
+        const menuEle = document.getElementById("menu")
+
+        function openSidebar(){
+            sidebarEle.style.visibility ="visible";
+            menuEle.style.visibility = "hidden";
+        }
+        function closeSidebar(){ 
+            sidebarEle.style.visibility ="hidden";   
+            menuEle.style.visibility = "visible";
+        }
+    </script>
+</body>
+</html>
